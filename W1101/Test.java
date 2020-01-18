@@ -45,7 +45,7 @@ public class Tests {
 			e.printStackTrace();
 		}
 		long end = System.currentTimeMillis();
-		if(Runtime.getRuntime().availableProcessors() >= 2) {
+		if(Runtime.getRuntime().availableProcessors() <= 2) {
 			assertTrue(end - before <= 6000000, "Slow multicore performance");
 		} else {
 			assertTrue(end - before <= 12000000, "Slow multicore performance");
